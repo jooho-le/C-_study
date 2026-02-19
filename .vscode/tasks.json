@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C++: Build current folder",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "mkdir -p \"${workspaceFolder}/build/${relativeFileDirname}\" && /usr/bin/clang++ -std=c++17 -g -Wall -Wextra -Wpedantic \"${fileDirname}\"/*.cpp -o \"${workspaceFolder}/build/${relativeFileDirname}/${fileDirnameBasename}\""
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "C++: Run current folder",
+      "type": "shell",
+      "dependsOn": "C++: Build current folder",
+      "dependsOrder": "sequence",
+      "command": "${workspaceFolder}/build/${relativeFileDirname}/${fileDirnameBasename}",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
