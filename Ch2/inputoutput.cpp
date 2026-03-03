@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main_inputoutput() {
     int i, j;
 
     cout << "enter num_1: ";
