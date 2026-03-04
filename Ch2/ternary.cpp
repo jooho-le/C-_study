@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main_ternary() {
     int a = 7;
     int b = 5;
     int result;
