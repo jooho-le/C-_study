@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/leejooho/Desktop/Cpp_study/build/Ch3/Ch3'
+relocations:     []
+...
